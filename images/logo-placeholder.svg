@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 130" role="img" aria-labelledby="title desc">
+  <title id="title">TimTim Ceramic ideiglenes logó</title>
+  <desc id="desc">Cserélhető helykitöltő logó.</desc>
+  <g fill="none" stroke="#fff" stroke-width="4">
+    <circle cx="57" cy="65" r="41"/>
+    <path d="M63 29c-22 9-30 31-18 49 8 13 7 22-5 28"/>
+    <path d="M76 36c-24 10-31 28-18 46 9 12 7 21-5 27"/>
+    <path d="M45 33c-19 13-22 32-10 48 7 10 7 18 0 25"/>
+  </g>
+  <line x1="118" y1="22" x2="118" y2="108" stroke="#fff" stroke-width="2"/>
+  <text x="140" y="61" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700">TimTim</text>
+  <text x="140" y="88" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="20" letter-spacing="2">CERAMIC</text>
+</svg>

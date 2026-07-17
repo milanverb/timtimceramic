@@ -1,0 +1,20 @@
+{
+  "name": "TimTim Ceramic",
+  "short_name": "TimTim",
+  "description": "Tolnai Tímea kézzel készített, egyedi kerámia alkotásai.",
+  "lang": "hu",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F2E8D8",
+  "theme_color": "#3B2D2C",
+  "icons": [
+    {
+      "src": "images/SVG/emblem.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

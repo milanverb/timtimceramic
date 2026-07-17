@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TimTim Ceramic galéria – Tolnai Tímea kézzel készített kerámia alkotásai.">
+    <meta name="theme-color" content="#3B2D2C">
+    <title>Galéria | TimTim Ceramic</title>
+    <link rel="icon" href="images/SVG/emblem.svg" type="image/svg+xml">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrapper header-row">
+            <a class="site-logo-link" href="index.html" aria-label="TimTim Ceramic főoldal">
+                <img class="site-logo" src="images/SVG/fekvo_logo.svg" alt="TimTim Ceramic logó">
+            </a>
+
+            <button class="menu-toggle" type="button" aria-controls="mainMenu" aria-expanded="false" aria-label="Menü megnyitása">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="mainMenu" aria-label="Főmenü">
+                <a href="index.html">Főoldal</a>
+                <a class="active" href="galeria.html">Galéria</a>
+                <a href="kapcsolat.html">Kapcsolat</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery-page">
+            <div class="wrapper">
+                <h1 class="page-title">Galéria</h1>
+                <div class="gallery-grid" id="galleryGrid" aria-label="TimTim Ceramic alkotások"></div>
+            </div>
+        </section>
+
+        <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Galéria képnézegető">
+            <div class="lightbox-panel">
+                <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Bezárás">×</button>
+                <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" type="button" aria-label="Előző kép">◀</button>
+                <img class="lightbox-image" id="lightboxImage" alt="">
+                <button class="lightbox-arrow lightbox-next" id="lightboxNext" type="button" aria-label="Következő kép">▶</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="wrapper footer-grid">
+                <div class="footer-brand">
+                    <img src="images/SVG/allo_logo.svg" alt="TimTim Ceramic logó">
+                </div>
+
+                <div class="footer-column">
+                    <h2>Elérhetőségek</h2>
+                    <ul>
+                        <li><a href="tel:+36709428979">+36 70 942 8979</a></li>
+                        <li><a href="mailto:tolnai.timea2006@gmail.com">tolnai.timea2006@gmail.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h2>Social Media</h2>
+                    <ul class="social-list">
+                        <li><a href="https://www.instagram.com/timtim_ceramic/" target="_blank" rel="noreferrer"><img src="images/icons/instagram-white.svg" alt="">timtim_ceramic</a></li>
+                        <li><a href="https://www.tiktok.com/@timtim_ceramic" target="_blank" rel="noreferrer"><img src="images/icons/tiktok-white.svg" alt="">timtim_ceramic</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Minden jog fenntartva! | <a href="adatkezelesi-tajekoztato.html">Adatvédelmi tájékoztató</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/gallery.js" defer></script>
+</body>
+
+</html>
