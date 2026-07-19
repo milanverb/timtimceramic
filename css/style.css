@@ -72,6 +72,8 @@ textarea {
 
 button {
     color: inherit;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 ul {
@@ -136,7 +138,7 @@ ul {
 .main-nav {
     display: flex;
     align-items: center;
-    gap: 72px;
+    gap: 54px;
 }
 
 .main-nav a {
@@ -259,6 +261,16 @@ ul {
 
 .pill-button:hover {
     transform: translateY(-2px);
+}
+
+.pill-button::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    flex: 0 0 auto;
+    border-top: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(45deg);
 }
 
 .pill-button-light {
@@ -412,6 +424,7 @@ ul {
 .gallery-item {
     padding: 0;
     border: 5px solid var(--brown-border);
+    border-radius: 0;
     background: var(--cream);
     cursor: pointer;
     overflow: hidden;
@@ -501,7 +514,24 @@ ul {
     height: 54px;
     color: var(--brown);
     background: var(--white);
-    font-size: 25px;
+}
+
+.lightbox-arrow::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-top: 3px solid currentColor;
+    border-right: 3px solid currentColor;
+}
+
+.lightbox-prev::before {
+    margin-left: 4px;
+    transform: rotate(-135deg);
+}
+
+.lightbox-next::before {
+    margin-right: 4px;
+    transform: rotate(45deg);
 }
 
 .lightbox-prev {
@@ -517,6 +547,59 @@ ul {
 .lightbox-prev:hover,
 .lightbox-next:hover {
     transform: translateY(-50%) scale(1.08);
+}
+
+.about-page {
+    min-height: 650px;
+    padding: 68px 0 78px;
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: minmax(300px, 460px) minmax(0, 1fr);
+    align-items: center;
+    gap: 90px;
+}
+
+.about-image-frame {
+    aspect-ratio: 1;
+    overflow: hidden;
+    border: 5px solid var(--brown-border);
+    background: var(--cream);
+}
+
+.about-image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-copy {
+    max-width: 560px;
+}
+
+.about-kicker {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.about-copy h1 {
+    margin-bottom: 24px;
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1;
+}
+
+.about-copy p:not(.about-kicker) {
+    margin-bottom: 18px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-copy .pill-button {
+    margin-top: 10px;
 }
 
 .contact-page {
@@ -772,7 +855,7 @@ ul {
 
 @media (max-width: 1040px) {
     .main-nav {
-        gap: 46px;
+        gap: 34px;
     }
 
     .hero-layout {
@@ -788,6 +871,11 @@ ul {
     .contact-layout {
         grid-template-columns: minmax(0, 1fr) minmax(300px, 0.8fr);
         gap: 60px;
+    }
+
+    .about-layout {
+        grid-template-columns: minmax(280px, 400px) minmax(0, 1fr);
+        gap: 56px;
     }
 }
 
@@ -808,7 +896,7 @@ ul {
         display: block;
     }
 
-    .main-nav:not(.always-visible) {
+    .main-nav {
         position: absolute;
         top: 100%;
         left: 0;
@@ -825,19 +913,10 @@ ul {
         display: flex;
     }
 
-    .main-nav:not(.always-visible) a {
+    .main-nav a {
         width: 100%;
         padding: 13px 0;
         text-align: center;
-    }
-
-    .main-nav.always-visible {
-        gap: 22px;
-    }
-
-    .main-nav.always-visible a {
-        padding-block: 28px;
-        font-size: 14px;
     }
 
     .hero-layout {
@@ -868,6 +947,25 @@ ul {
         gap: 58px;
     }
 
+    .about-page {
+        padding: 52px 0 64px;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .about-image-frame {
+        width: min(100%, 460px);
+        margin-inline: auto;
+    }
+
+    .about-copy {
+        max-width: 640px;
+        margin-inline: auto;
+    }
+
     .contact-info-panel {
         padding-top: 12px;
     }
@@ -885,10 +983,6 @@ ul {
 
     .site-logo {
         width: 132px;
-    }
-
-    .main-nav.always-visible {
-        display: none;
     }
 
     .hero-layout {
@@ -979,6 +1073,18 @@ ul {
 
     .contact-page {
         padding: 44px 0 56px;
+    }
+
+    .about-page {
+        padding: 40px 0 54px;
+    }
+
+    .about-copy h1 {
+        font-size: 38px;
+    }
+
+    .about-copy p:not(.about-kicker) {
+        font-size: 16px;
     }
 
     .contact-form-panel form {

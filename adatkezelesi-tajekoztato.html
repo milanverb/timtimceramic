@@ -18,8 +18,16 @@
             <a class="site-logo-link" href="index.html" aria-label="TimTim Ceramic főoldal">
                 <img class="site-logo" src="images/SVG/fekvo_logo.svg" alt="TimTim Ceramic logó">
             </a>
-            <nav class="main-nav always-visible" aria-label="Főmenü">
+
+            <button class="menu-toggle" type="button" aria-controls="mainMenu" aria-expanded="false" aria-label="Menü megnyitása">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="mainMenu" aria-label="Főmenü">
                 <a href="index.html">Főoldal</a>
+                <a href="bemutatkozas.html">Bemutatkozás</a>
                 <a href="galeria.html">Galéria</a>
                 <a href="kapcsolat.html">Kapcsolat</a>
             </nav>
@@ -64,6 +72,7 @@
             <p>Minden jog fenntartva! | Adatvédelmi tájékoztató</p>
         </div>
     </footer>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>

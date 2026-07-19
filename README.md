@@ -14,7 +14,8 @@ Tolnai Tímea keramikus bemutatkozó és portfólió weboldala. A statikus honla
 ## Projektstruktúra
 
 - `index.html` – főoldal és kiemelt alkotások
-- `galeria.html` – 101 elemes, nagyítható galéria
+- `bemutatkozas.html` – alkotói bemutatkozás
+- `galeria.html` – 77 elemes, nagyítható galéria
 - `kapcsolat.html` – Netlify-kompatibilis kapcsolatfelvételi űrlap
 - `koszonjuk.html` – sikeres űrlapküldés utáni oldal
 - `adatkezelesi-tajekoztato.html` – adatvédelmi tájékoztató
