@@ -1,6 +1,6 @@
 # TimTim Ceramic
 
-Tolnai Tímea keramikus bemutatkozó és portfólió weboldala. A statikus honlap bemutatja a TimTim Ceramic kézzel készített alkotásait, teljes képgalériát és Netlify Forms alapú kapcsolatfelvételi lehetőséget tartalmaz.
+Tolnai Tímea keramikus bemutatkozó, termék- és portfólió weboldala. A statikus honlap bemutatja a TimTim Ceramic kézzel készített alkotásait, állandó termékeit, teljes képgalériát és Netlify Forms alapú kapcsolatfelvételi lehetőséget tartalmaz.
 
 ## Technológia
 
@@ -15,6 +15,7 @@ Tolnai Tímea keramikus bemutatkozó és portfólió weboldala. A statikus honla
 
 - `index.html` – főoldal és kiemelt alkotások
 - `bemutatkozas.html` – alkotói bemutatkozás
+- `termekek.html` – állandó termékek, árak és egyedi megrendelések
 - `galeria.html` – 77 elemes, nagyítható galéria
 - `kapcsolat.html` – Netlify-kompatibilis kapcsolatfelvételi űrlap
 - `koszonjuk.html` – sikeres űrlapküldés utáni oldal
@@ -39,7 +40,7 @@ Ezután nyisd meg a `http://localhost:8080/` címet. A HTML fájlok közvetlen m
 
 ## Tartalomfrissítés
 
-A galéria kevert sorrendű képlistája a `js/gallery.js` elején található. A rács a `images/gallery/thumbs/` képeit tölti be, a lightbox pedig csak megnyitáskor kéri le a megfelelő `images/gallery/full/` fájlt. A főoldali slider képei az `images/slider/` mappában találhatók.
+A galéria kevert sorrendű képlistája a `js/gallery.js` elején található. A rács a `images/gallery/thumbs/` képeit tölti be, a lightbox pedig csak megnyitáskor kéri le a megfelelő `images/gallery/full/` fájlt. A főoldali slider képei az `images/slider/`, a Termékek oldal optimalizált képei az `images/products/` mappában találhatók.
 
 ## Deployment Netlifyra
 

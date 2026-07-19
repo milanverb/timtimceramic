@@ -550,15 +550,14 @@ ul {
 }
 
 .about-page {
-    min-height: 650px;
-    padding: 68px 0 78px;
+    padding: 68px 0 96px;
 }
 
-.about-layout {
+.about-intro {
     display: grid;
-    grid-template-columns: minmax(300px, 460px) minmax(0, 1fr);
+    grid-template-columns: minmax(360px, 1fr) minmax(0, 1fr);
     align-items: center;
-    gap: 90px;
+    gap: clamp(56px, 7vw, 96px);
 }
 
 .about-image-frame {
@@ -574,32 +573,205 @@ ul {
     object-fit: cover;
 }
 
-.about-copy {
-    max-width: 560px;
+.about-statement {
+    padding: 18px 0 8px;
 }
 
 .about-kicker {
-    margin-bottom: 10px;
-    font-size: 15px;
+    margin-bottom: 22px;
+    font-size: 14px;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
 }
 
-.about-copy h1 {
-    margin-bottom: 24px;
-    font-size: clamp(36px, 5vw, 58px);
+.about-statement blockquote {
+    position: relative;
+    padding-top: 52px;
+    font-size: clamp(20px, 2.1vw, 29px);
+    line-height: 1.62;
+}
+
+.about-statement blockquote::before {
+    content: "“";
+    position: absolute;
+    top: -23px;
+    left: -4px;
+    color: rgba(59, 45, 44, 0.24);
+    font-family: Georgia, serif;
+    font-size: 104px;
+    font-weight: 700;
     line-height: 1;
 }
 
-.about-copy p:not(.about-kicker) {
-    margin-bottom: 18px;
-    font-size: 18px;
-    line-height: 1.6;
+.about-person {
+    margin-top: 38px;
 }
 
-.about-copy .pill-button {
-    margin-top: 10px;
+.about-person h1 {
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: 1.05;
+}
+
+.about-person p {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 14px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.about-content {
+    margin-top: 86px;
+    border-top: 1px solid var(--brown-border);
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: minmax(210px, 0.34fr) minmax(0, 1fr);
+    gap: clamp(44px, 8vw, 116px);
+    padding: 64px 0;
+    border-bottom: 1px solid var(--brown-border);
+}
+
+.about-section h2 {
+    font-size: clamp(27px, 3vw, 38px);
+    line-height: 1.12;
+}
+
+.about-section-copy {
+    max-width: 760px;
+}
+
+.about-section-copy p {
+    margin-bottom: 24px;
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.about-section-copy p:last-child {
+    margin-bottom: 0;
+}
+
+.products-page {
+    padding: 72px 0 104px;
+}
+
+.products-intro {
+    max-width: 900px;
+    margin-bottom: 60px;
+}
+
+.products-intro h1 {
+    margin-bottom: 28px;
+    font-size: clamp(44px, 6vw, 72px);
+    line-height: 0.98;
+}
+
+.products-intro p,
+.custom-orders-header p,
+.custom-order-copy p {
+    font-size: 18px;
+    line-height: 1.72;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 42px 38px;
+}
+
+.product-card {
+    border: 1px solid var(--brown-border);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.product-card-image {
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: var(--brown);
+}
+
+.product-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-card-image img {
+    transform: scale(1.025);
+}
+
+.product-card-body {
+    padding: 28px 30px 30px;
+}
+
+.product-card-body h2 {
+    margin-bottom: 18px;
+    font-size: 31px;
+    line-height: 1.1;
+}
+
+.product-price-list li {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 22px;
+    padding: 12px 0;
+    border-top: 1px solid rgba(59, 45, 44, 0.22);
+    font-size: 16px;
+}
+
+.product-price-list strong {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+.custom-orders {
+    margin-top: 104px;
+    padding-top: 74px;
+    border-top: 1px solid var(--brown-border);
+}
+
+.custom-orders-header {
+    max-width: 830px;
+    margin-bottom: 64px;
+}
+
+.custom-orders-header h2 {
+    margin-bottom: 26px;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1;
+}
+
+.custom-order-story {
+    display: grid;
+    grid-template-columns: minmax(300px, 0.82fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(48px, 8vw, 108px);
+    margin-bottom: 72px;
+}
+
+.custom-order-story:last-child {
+    margin-bottom: 0;
+}
+
+.custom-order-image {
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border: 5px solid var(--brown-border);
+    background: var(--brown);
+}
+
+.custom-order-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.custom-order-copy .pill-button {
+    margin-top: 28px;
 }
 
 .contact-page {
@@ -873,9 +1045,13 @@ ul {
         gap: 60px;
     }
 
-    .about-layout {
-        grid-template-columns: minmax(280px, 400px) minmax(0, 1fr);
-        gap: 56px;
+    .about-intro {
+        grid-template-columns: minmax(300px, 400px) minmax(0, 1fr);
+        gap: 52px;
+    }
+
+    .custom-order-story {
+        gap: 52px;
     }
 }
 
@@ -951,7 +1127,7 @@ ul {
         padding: 52px 0 64px;
     }
 
-    .about-layout {
+    .about-intro {
         grid-template-columns: 1fr;
         gap: 42px;
     }
@@ -961,9 +1137,51 @@ ul {
         margin-inline: auto;
     }
 
-    .about-copy {
+    .about-statement {
         max-width: 640px;
         margin-inline: auto;
+    }
+
+    .about-content {
+        margin-top: 64px;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 48px 0;
+    }
+
+    .products-page {
+        padding: 56px 0 80px;
+    }
+
+    .products-intro {
+        margin-bottom: 48px;
+    }
+
+    .product-card-body {
+        padding-inline: 24px;
+    }
+
+    .custom-orders {
+        margin-top: 80px;
+        padding-top: 58px;
+    }
+
+    .custom-order-story {
+        grid-template-columns: 1fr;
+        gap: 34px;
+        margin-bottom: 60px;
+    }
+
+    .custom-order-image {
+        width: min(100%, 480px);
+    }
+
+    .custom-order-story-reverse .custom-order-image {
+        order: -1;
+        margin-left: auto;
     }
 
     .contact-info-panel {
@@ -1079,12 +1297,71 @@ ul {
         padding: 40px 0 54px;
     }
 
-    .about-copy h1 {
-        font-size: 38px;
+    .about-statement blockquote {
+        font-size: 19px;
     }
 
-    .about-copy p:not(.about-kicker) {
+    .about-person h1 {
+        font-size: 36px;
+    }
+
+    .about-person p {
+        letter-spacing: 0.1em;
+    }
+
+    .about-content {
+        margin-top: 52px;
+    }
+
+    .about-section {
+        padding: 40px 0;
+    }
+
+    .about-section-copy p {
         font-size: 16px;
+        line-height: 1.68;
+    }
+
+    .products-page {
+        padding: 44px 0 64px;
+    }
+
+    .products-intro h1 {
+        font-size: 42px;
+    }
+
+    .products-intro p,
+    .custom-orders-header p,
+    .custom-order-copy p {
+        font-size: 16px;
+        line-height: 1.68;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .product-card-body h2 {
+        font-size: 28px;
+    }
+
+    .product-price-list li {
+        gap: 16px;
+        font-size: 15px;
+    }
+
+    .custom-orders {
+        margin-top: 64px;
+        padding-top: 46px;
+    }
+
+    .custom-orders-header {
+        margin-bottom: 46px;
+    }
+
+    .custom-orders-header h2 {
+        font-size: 38px;
     }
 
     .contact-form-panel form {
