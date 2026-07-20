@@ -19,7 +19,7 @@ Tolnai Tímea keramikus bemutatkozó, termék- és portfólió weboldala. A stat
 - `galeria.html` – 77 elemes, nagyítható galéria
 - `kapcsolat.html` – Netlify-kompatibilis kapcsolatfelvételi űrlap
 - `koszonjuk.html` – sikeres űrlapküldés utáni oldal
-- `adatkezelesi-tajekoztato.html` – adatvédelmi tájékoztató
+- `documents/timtim-ceramic-adatkezelesi-tajekoztato.pdf` – adatkezelési tájékoztató
 - `css/` – megjelenés és reszponzív töréspontok
 - `js/` – mobilmenü, slider és lightbox
 - `fonts/` – helyben kiszolgált Inter webfont és licenc

@@ -550,14 +550,14 @@ ul {
 }
 
 .about-page {
-    padding: 68px 0 96px;
+    padding: 60px 0 82px;
 }
 
 .about-intro {
     display: grid;
-    grid-template-columns: minmax(360px, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(300px, 420px) minmax(0, 1fr);
     align-items: center;
-    gap: clamp(56px, 7vw, 96px);
+    gap: clamp(48px, 6vw, 78px);
 }
 
 .about-image-frame {
@@ -587,55 +587,55 @@ ul {
 
 .about-statement blockquote {
     position: relative;
-    padding-top: 52px;
-    font-size: clamp(20px, 2.1vw, 29px);
-    line-height: 1.62;
+    padding-top: 44px;
+    font-size: clamp(18px, 1.65vw, 23px);
+    line-height: 1.6;
 }
 
 .about-statement blockquote::before {
     content: "“";
     position: absolute;
-    top: -23px;
+    top: -18px;
     left: -4px;
     color: rgba(59, 45, 44, 0.24);
     font-family: Georgia, serif;
-    font-size: 104px;
+    font-size: 86px;
     font-weight: 700;
     line-height: 1;
 }
 
 .about-person {
-    margin-top: 38px;
+    margin-top: 30px;
 }
 
 .about-person h1 {
-    font-size: clamp(34px, 4vw, 52px);
+    font-size: clamp(32px, 3.4vw, 44px);
     line-height: 1.05;
 }
 
 .about-person p {
-    margin-top: 12px;
+    margin-top: 10px;
     color: var(--muted);
-    font-size: 14px;
-    letter-spacing: 0.16em;
+    font-size: 13px;
+    letter-spacing: 0.13em;
     text-transform: uppercase;
 }
 
 .about-content {
-    margin-top: 86px;
+    margin-top: 70px;
     border-top: 1px solid var(--brown-border);
 }
 
 .about-section {
     display: grid;
     grid-template-columns: minmax(210px, 0.34fr) minmax(0, 1fr);
-    gap: clamp(44px, 8vw, 116px);
-    padding: 64px 0;
+    gap: clamp(40px, 7vw, 96px);
+    padding: 50px 0;
     border-bottom: 1px solid var(--brown-border);
 }
 
 .about-section h2 {
-    font-size: clamp(27px, 3vw, 38px);
+    font-size: clamp(25px, 2.6vw, 32px);
     line-height: 1.12;
 }
 
@@ -644,13 +644,18 @@ ul {
 }
 
 .about-section-copy p {
-    margin-bottom: 24px;
-    font-size: 17px;
-    line-height: 1.75;
+    margin-bottom: 22px;
+    font-size: 16px;
+    line-height: 1.7;
 }
 
 .about-section-copy p:last-child {
     margin-bottom: 0;
+}
+
+.about-section:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
 }
 
 .products-page {
@@ -669,8 +674,7 @@ ul {
 }
 
 .products-intro p,
-.custom-orders-header p,
-.custom-order-copy p {
+.custom-order-flow p {
     font-size: 18px;
     line-height: 1.72;
 }
@@ -736,7 +740,7 @@ ul {
 
 .custom-orders-header {
     max-width: 830px;
-    margin-bottom: 64px;
+    margin-bottom: 42px;
 }
 
 .custom-orders-header h2 {
@@ -745,33 +749,51 @@ ul {
     line-height: 1;
 }
 
-.custom-order-story {
-    display: grid;
-    grid-template-columns: minmax(300px, 0.82fr) minmax(0, 1fr);
-    align-items: center;
-    gap: clamp(48px, 8vw, 108px);
-    margin-bottom: 72px;
+.custom-order-flow {
+    max-width: 1000px;
 }
 
-.custom-order-story:last-child {
-    margin-bottom: 0;
+.custom-order-flow::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
-.custom-order-image {
+.custom-order-flow p {
+    margin-bottom: 24px;
+}
+
+.custom-order-float {
+    width: 250px;
     aspect-ratio: 3 / 4;
     overflow: hidden;
-    border: 5px solid var(--brown-border);
+    border: 4px solid var(--brown-border);
     background: var(--brown);
 }
 
-.custom-order-image img {
+.custom-order-float-left {
+    float: left;
+    margin: 5px 36px 24px 0;
+}
+
+.custom-order-float-right {
+    float: right;
+    margin: 5px 0 24px 36px;
+}
+
+.custom-order-break {
+    height: 8px;
+    clear: both;
+}
+
+.custom-order-float img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.custom-order-copy .pill-button {
-    margin-top: 28px;
+.custom-order-flow .pill-button {
+    margin-top: 8px;
 }
 
 .contact-page {
@@ -884,6 +906,14 @@ ul {
     font-size: 22px;
 }
 
+.contact-info-panel > .contact-document {
+    margin-top: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 .contact-social {
     margin-top: 8px;
     display: flex;
@@ -949,6 +979,18 @@ ul {
 .social-list img {
     width: 22px;
     height: 22px;
+}
+
+.footer-partner {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 16px;
+}
+
+.footer-partner a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .footer-bottom {
@@ -1046,12 +1088,8 @@ ul {
     }
 
     .about-intro {
-        grid-template-columns: minmax(300px, 400px) minmax(0, 1fr);
-        gap: 52px;
-    }
-
-    .custom-order-story {
-        gap: 52px;
+        grid-template-columns: minmax(270px, 360px) minmax(0, 1fr);
+        gap: 48px;
     }
 }
 
@@ -1133,7 +1171,7 @@ ul {
     }
 
     .about-image-frame {
-        width: min(100%, 460px);
+        width: min(100%, 400px);
         margin-inline: auto;
     }
 
@@ -1167,21 +1205,6 @@ ul {
     .custom-orders {
         margin-top: 80px;
         padding-top: 58px;
-    }
-
-    .custom-order-story {
-        grid-template-columns: 1fr;
-        gap: 34px;
-        margin-bottom: 60px;
-    }
-
-    .custom-order-image {
-        width: min(100%, 480px);
-    }
-
-    .custom-order-story-reverse .custom-order-image {
-        order: -1;
-        margin-left: auto;
     }
 
     .contact-info-panel {
@@ -1298,11 +1321,11 @@ ul {
     }
 
     .about-statement blockquote {
-        font-size: 19px;
+        font-size: 17px;
     }
 
     .about-person h1 {
-        font-size: 36px;
+        font-size: 33px;
     }
 
     .about-person p {
@@ -1318,7 +1341,7 @@ ul {
     }
 
     .about-section-copy p {
-        font-size: 16px;
+        font-size: 15.5px;
         line-height: 1.68;
     }
 
@@ -1331,8 +1354,7 @@ ul {
     }
 
     .products-intro p,
-    .custom-orders-header p,
-    .custom-order-copy p {
+    .custom-order-flow p {
         font-size: 16px;
         line-height: 1.68;
     }
@@ -1364,6 +1386,16 @@ ul {
         font-size: 38px;
     }
 
+    .custom-order-float {
+        float: none;
+        width: min(72%, 260px);
+        margin: 0 0 24px;
+    }
+
+    .custom-order-float-right {
+        margin-left: auto;
+    }
+
     .contact-form-panel form {
         gap: 18px;
     }
@@ -1388,6 +1420,10 @@ ul {
     }
 
     .footer-column a {
+        justify-content: center;
+    }
+
+    .footer-partner {
         justify-content: center;
     }
 
