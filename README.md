@@ -53,4 +53,4 @@ A galéria kevert sorrendű képlistája a `js/gallery.js` elején található. 
 
 A `netlify.toml` már tartalmazza a publish könyvtárat. A kapcsolatfelvételi űrlapot a Netlify automatikusan felismeri a `data-netlify="true"` attribútum alapján.
 
-Az alapértelmezett sitemap domain `https://timtim-ceramic.netlify.app`. Egyedi domain használatakor ezt a címet a `robots.txt` és `sitemap.xml` fájlokban is frissíteni kell.
+A sitemap és a robots fájl a kanonikus `https://timtimceramic.hu` domainre mutat.

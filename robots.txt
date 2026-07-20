@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /koszonjuk.html
 
-Sitemap: https://timtim-ceramic.netlify.app/sitemap.xml
+Sitemap: https://timtimceramic.hu/sitemap.xml
